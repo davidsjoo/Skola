@@ -19,7 +19,7 @@ public class Main {
             if (m < 13 && n < 31)  {
 
                 for (int i = 0; i < 10; i++) {
-                    char pers = persnr.charAt(i);
+                      char pers = persnr.charAt(i);
                     int persint = Character.digit(pers, 10);
 
                     if (i % 2 == 0) { //Kollar om positionen som "i" har är jämnt delbar med 2 dvs: 0,2,4 osv..
