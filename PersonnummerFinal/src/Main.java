@@ -6,8 +6,8 @@ public class Main {
         int sum = 0;
         Scanner sc = new Scanner(System.in);
 
-        System.out.print("Skriv ett personnummer eller ett organisationsnummer, med 10 siffror: ");
-        String persnr = sc.next();
+        //System.out.print("Skriv ett personnummer eller ett organisationsnummer, med 10 siffror: ");
+        String persnr = "8702171953";
 
         if (persnr.length() != 10) {
             System.out.print("Felaktig inmatning");
@@ -48,6 +48,7 @@ public class Main {
                 } else {
                     System.out.println("Du är en man");
                 }
+                System.out.println("Du är född " + n + "/" + m);
 
             }
 
@@ -77,6 +78,31 @@ public class Main {
                 else {
                 System.out.println("Du har skrivit ett felaktigt organisationsnummer");
                 }
+            }
+
+            else if (n > 60) {
+                for (int y = 0; y < 10; y++) {
+                    char sam = persnr.charAt(y);
+                    int samint = Character.digit(sam, 10);
+
+                    if (y % 2 == 0) { //Kollar om positionen som "i" har är jämnt delbar med 2 dvs: 0,2,4 osv..
+                        samint = samint * 2;
+                    }
+
+                    if (samint >= 10) {
+                        samint = samint - 10 + 1;
+                    }
+
+                    sum = sum + samint;
+                }
+
+                if (sum % 10 == 0) {
+                    System.out.println("Du har skrivit ett giltigt samordningsnummer");
+                }
+                else {
+                    System.out.println("Du har skrivit ett felaktigt samordningsnummer");
+                }
+
             }
 
         }
