@@ -20,8 +20,7 @@ public class Main {
 
             while (sc2.hasNextLine()) {
                 Scanner s2 = new Scanner(sc2.nextLine());
-                boolean b;
-                while (b = s2.hasNext()) {
+                while (s2.hasNext()) {
                     String s = s2.next();
                     lexikon.put(s, s2.next());
                 }
