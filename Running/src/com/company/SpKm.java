@@ -13,7 +13,7 @@ public class SpKm {
         this.distance = distance;
     }
 
-    public int getSpkm() {
+    public double getSpkm() {
         double mpkm = tid / distance;
         double rest = mpkm % 1;
         rest = rest * 100;

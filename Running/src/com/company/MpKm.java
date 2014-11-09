@@ -8,7 +8,7 @@ public class MpKm {
     private double tid;
     private double distance;
 
-    public int getMpkm() {
+    public double getMpkm() {
         double mpkm = tid / distance;
         return (int) mpkm;
     }
